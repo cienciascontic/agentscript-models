@@ -163,9 +163,9 @@ AirPollutionControls = (function() {
     };
     ABM.model.graphSampleInterval = 10;
     defaultOptions = {
-      title: "Primary (brown), Secondary (orange) Pollutants",
-      xlabel: "Time (ticks)",
-      ylabel: "AQI (Air Quality Index)",
+      title: "Contaminantes Primarios (marrón), Secundarios (naranja)",
+      xlabel: "Tiempo(tics)",
+      ylabel: "ICA (Índice de Calidad del Aire)",
       xmax: 2100,
       xmin: 0,
       ymax: 300,
@@ -183,10 +183,10 @@ AirPollutionControls = (function() {
     labelInfo = [
       {
         color: AirPollutionModel.pollutantColors.primary,
-        label: "Primary Pollutants"
+        label: "Contaminantes Primarios"
       }, {
         color: AirPollutionModel.pollutantColors.secondary,
-        label: "Secondary Pollutants"
+        label: "Contaminantes Secundarios"
       }
     ];
     appendKeyToGraph('pollution-graph', 20, labelInfo);
