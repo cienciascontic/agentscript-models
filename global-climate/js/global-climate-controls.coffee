@@ -67,7 +67,7 @@ $(document).ready ->
     { key: "heat", draw: (ctx) -> drawShape ctx, "rgb(255, 63, 63)", "circle", 0.8 }
   ]
 
-  defaultAboutText = "<p>These graphs show the relative change in temperature (upper graph) and concentration of greenhouse gases in the atmosphere and ocean (lower graph). <p>Together, these graphs show the relationship between the concentrations of greenhouse gases and temperature of the planet. <p>This model is a simplified representation of the climate system, and as such, it does not show the actual concentrations of greenhouse gases in the atmosphere and ocean."
+  defaultAboutText = "<p>Estos gráficos muestran el cambio relativo en la temperatura (superior) y la concentración de gases invernadero en la atmósfera y el océano (gráfico inferior). <p>Juntos, estos gráficos muestran la relación entre la concentración de gases invernadero y la temperatura del planeta. <p>This model is a simplified representation of the climate system, and as such, it does not show the actual concentrations of greenhouse gases in the atmosphere and ocean."
 
   drawShape = (ctx, fillStyle, shapeName, scale=1) ->
     ctx.save()
@@ -194,34 +194,34 @@ $speedSlider.on 'slide', (event, ui) ->
 
 $('#follow-sunray-button').click ->
   $span = $(this).find("span")
-  if $span.text() is "Follow energy packet"
+  if $span.text() is "Seguir paquete de energía"
     climateModel.addSunraySpotlight()
     $span.text "Stop following"
     isFollowingAgent = true
   else
     climateModel.removeSpotlight()
-    $span.text "Follow energy packet"
+    $span.text "Seguir paquete de energía"
     isFollowingAgent = false
 
 $('#follow-co2-button').click ->
   $span = $(this).find("span")
-  if $span.text() is "Follow CO2"
+  if $span.text() is "Seguir CO2"
     climateModel.addCO2Spotlight()
-    $span.text "Stop following"
+    $span.text "Dejar de seguir"
     isFollowingAgent = true
   else
     climateModel.removeSpotlight()
-    $span.text "Follow CO2"
+    $span.text "Seguir CO2"
     isFollowingAgent = false
 
 $('#hide-button').click ->
   $span = $(this).find("span")
-  if $span.text() is "Hide 90% of elements"
+  if $span.text() is "Ocultar el 90% de los elementos"
     climateModel.hide90()
-    $span.text "Show all elements"
+    $span.text "Mostrar todos los elementos"
   else
     climateModel.showAll()
-    $span.text "Hide 90% of elements"
+    $span.text "Ocultar el 90% de los elementos"
 
 $('#show-agent-controls input').click ->
   $this   = $(this)
@@ -254,16 +254,16 @@ resetSliders = ->
 setupGraphs = ->
   if $('#temperature-graph').length
 
-    title = "Temperature Change"
-    if isOceanTemperatureModel then title += " in Air (red) and Ocean (blue)"
+    title = "Cambio de temperatura"
+    if isOceanTemperatureModel then title += " en el Aire (rojo) y el Océano (azul)"
 
     ymax = if isOceanTemperatureModel then 12 else 12
     ymin = if isOceanTemperatureModel then -12 else -6
 
     temperatureGraph = LabGrapher('#temperature-graph',
       title:  title
-      xlabel: "Time (year)"
-      ylabel: "Temperature (°C)"
+      xlabel: "Tiempo (año)"
+      ylabel: "Temperatura (°C)"
       xmax:   new Date().getFullYear() + 7
       xmin:   new Date().getFullYear()
       ymax:   ymax
@@ -287,14 +287,14 @@ setupGraphs = ->
 
   if $('#co2-graph').length
 
-    title = if isOceanModel then "Air CO₂ (red), Ocean CO₂ (green)" else "CO₂ in Atmosphere"
-    if climateModel.includeVapor then title += ", Vapor (blue)"
+    title = if isOceanModel then "CO₂ Aire (rojo), CO₂ Océano (verde)" else "CO₂ en Atmósfera"
+    if climateModel.includeVapor then title += ", Vapor (azul)"
     ymax  = if isOceanModel then 30 else 100
 
     co2Graph = LabGrapher('#co2-graph',
         title:  title
-        xlabel: "Time (year)"
-        ylabel: "Greenhouse gases in the model"
+        xlabel: "Tiempo (año)"
+        ylabel: "Gases invernadero en el modelo"
         xmax:   new Date().getFullYear() + 7
         xmin:   new Date().getFullYear()
         ymax:   ymax
