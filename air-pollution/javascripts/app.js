@@ -121,7 +121,7 @@ AirPollutionControls = (function() {
     appendKeyToGraph = function(graphId, top, labelInfo) {
       var $graph;
       $graph = $("#" + graphId);
-      $graph.append('<a href="#" class="show-key">show key</a>');
+      $graph.append('<a href="#" class="show-key">mostrar ref</a>');
       return $graph.find('.show-key').click(function() {
         var $key, canvas;
         if (!($("#" + graphId + "-key").length > 0)) {
@@ -163,8 +163,8 @@ AirPollutionControls = (function() {
     };
     ABM.model.graphSampleInterval = 10;
     defaultOptions = {
-      title: "Contaminantes Primarios (marrón), Secundarios (naranja)",
-      xlabel: "Tiempo(tics)",
+      title: "Contaminantes Prim.(marrón), Sec.(naranja)",
+      xlabel: "Tiempo (tics)",
       ylabel: "ICA (Índice de Calidad del Aire)",
       xmax: 2100,
       xmin: 0,
