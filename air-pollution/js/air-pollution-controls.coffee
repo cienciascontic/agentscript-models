@@ -18,9 +18,9 @@ class AirPollutionControls
 
     ABM.model.graphSampleInterval = 10
     defaultOptions =
-      title:  "Primary (red), Secondary (black) Pollutants"
-      xlabel: "Time (ticks)"
-      ylabel: "AQI"
+      title:  "Contaminantes Primarios (rojo), Secundarios (negro) "
+      xlabel: "Tiempo (tics)"
+      ylabel: "AQI (ICA)"
       xmax:   2100
       xmin:   0
       ymax:   300
