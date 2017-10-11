@@ -101,7 +101,7 @@ $(document).ready ->
 
   # add a link that, when clicked, pops up a non-modal, draggable canvas element that shows a key
   # for the different agent shapes
-  $showKey = $('<a href="#" class="show-agents-key">Show key</a>').appendTo $ '#content'
+  $showKey = $('<a href="#" class="show-agents-key">Referencias:</a>').appendTo $ '#content'
   $showKey.click ->
     if ($key = $('#agents-key')).length is 0
       $key = $("<div id='agents-key' class='popup'><a class='icon-remove-sign icon-large'></a><canvas></canvas></div>").appendTo($ document.body).draggable()
