@@ -60,11 +60,11 @@ window.initControls = (args) ->
 $(document).ready ->
 
   labels = [
-    { key: "solar radiation", draw: (ctx) -> drawShape ctx, "rgb(235, 235, 0)", "arrow" }
-    { key: "infrared radiation", draw: (ctx) -> drawShape ctx, "rgb(200, 32, 200)", "arrow" }
-    { key: "carbon dioxide", draw: (ctx) -> drawShape ctx, "rgb(0, 255, 0)", "pentagon", 0.8 }
-    { key: "water vapor", draw: (ctx) -> drawShape ctx, "rgb(0, 0, 255)", "circle", 0.8 }
-    { key: "heat", draw: (ctx) -> drawShape ctx, "rgb(255, 63, 63)", "circle", 0.8 }
+    { key: "radiación solar", draw: (ctx) -> drawShape ctx, "rgb(235, 235, 0)", "arrow" }
+    { key: "radiación infrarroja", draw: (ctx) -> drawShape ctx, "rgb(200, 32, 200)", "arrow" }
+    { key: "dióxido de carbono", draw: (ctx) -> drawShape ctx, "rgb(0, 255, 0)", "pentagon", 0.8 }
+    { key: "vapor de agua", draw: (ctx) -> drawShape ctx, "rgb(0, 0, 255)", "circle", 0.8 }
+    { key: "calor", draw: (ctx) -> drawShape ctx, "rgb(255, 63, 63)", "circle", 0.8 }
   ]
 
   defaultAboutText = "<p>Estos gráficos muestran el cambio relativo en la temperatura (superior) y la concentración de gases invernadero en la atmósfera y el océano (gráfico inferior). <p>Juntos, estos gráficos muestran la relación entre la concentración de gases invernadero y la temperatura del planeta. <p>This model is a simplified representation of the climate system, and as such, it does not show the actual concentrations of greenhouse gases in the atmosphere and ocean."
