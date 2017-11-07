@@ -133,7 +133,7 @@ class FrackingControls
     # that shows labeled lines for the different sample types used by the specified graph.
     appendKeyToGraph = (graphId, top, labelInfo) ->
       $graph = $ "##{graphId}"
-      $graph.append '<a href="#" class="show-key">show key</a>'
+      $graph.append '<a href="#" class="show-key">referencias</a>'
       $graph.find('.show-key').click ->
         unless $("##{graphId}-key").length > 0
           $key = $("<div id=\"#{graphId}-key\" class=\"key\"><a class=\"icon-remove-sign icon-large\"></a><canvas></canvas></div>").appendTo($(document.body)).draggable()
@@ -192,7 +192,7 @@ class FrackingControls
     if $('#output-graph').length > 0
       @outputGraph = LabGrapher '#output-graph', outputOptions
 
-      labelInfo = ({ color: GasWell.labelColors[i], label: "Well #{i+1} Output"} for i in [0...3]).concat([{ color: [0, 0, 0], label: "Combined Output" }])
+      labelInfo = ({ color: GasWell.labelColors[i], label: "Reservorio #{i+1} "} for i in [0...3]).concat([{ color: [0, 0, 0], label: "Salida combinada" }])
       appendKeyToGraph 'output-graph', 50, labelInfo
 
       # start the graph with four lines, each at 0,0
