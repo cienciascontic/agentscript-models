@@ -169,9 +169,9 @@ class FrackingControls
         y += 20
 
     outputOptions =
-      title:  "Methane Production"
-      xlabel: "Time (years)"
-      ylabel: "Methane"
+      title:  "Producción de metano"
+      xlabel: "Tiempo (años)"
+      ylabel: "Metano"
       xmax:   40
       xmin:   0
       ymax:   600
@@ -211,9 +211,9 @@ class FrackingControls
 
     if $('#contaminant-graph').length > 0
       contaminantOptions =
-        title:  "Contaminants in the aquifer"
-        xlabel: "Time (years)"
-        ylabel: "Contaminants"
+        title:  "Contaminantes en el acuífero"
+        xlabel: "Tiempo (años)"
+        ylabel: "Contaminantes"
         xmax:   40
         xmin:   0
         ymax:   250
@@ -233,8 +233,8 @@ class FrackingControls
 
       @contaminantGraph = LabGrapher '#contaminant-graph', contaminantOptions
       appendKeyToGraph 'contaminant-graph', 260, [
-        { color: [160,   0,   0], label: "Leaked Methane", }
-        { color: [ 44, 160,   0], label: "Pond Waste" }
+        { color: [160,   0,   0], label: "Metano filtrado", }
+        { color: [ 44, 160,   0], label: "Residuos de la laguna" }
       ]
 
       # start the graph with just methane in water
