@@ -33,7 +33,7 @@
           "carbon dioxide",
           "heat"
         ];
-        climateModel.aboutText = "<p>These graphs show the relative change in temperature (upper graph) and concentration of greenhouse gases in the atmosphere (lower graph). <p>Together, these graphs show the relationship between the concentrations of greenhouse gases and temperature of the planet. <p>This model is a simplified representation of the climate system, and as such, it does not show the actual concentrations of greenhouse gases in the atmosphere."
+        climateModel.aboutText = "<p>Estos gráficos muestran el cambio relativo en la temperatura (gráfico superior) y la concentación de gases de efecto invernadero en la atmósfera (gráfico inferior). <p>Juntos, estos gráficos muestran la relación entre la concentración de gaseas de efecto invernadero (GEI) y la temperatura del planeta. <p>Este modelo es una representación simplificada del sistema climático, y como tal, no muestra la concentración actual de gases de efecto invernadero en la atmósfera."
 
         initControls();
       });
@@ -48,25 +48,25 @@
     </div>
     <div id="content">
       <div id="model">
-        <canvas id="canvas" >Your browser does not support HTML5 Canvas.</canvas>
+        <canvas id="canvas" >Su navegador no soporta HTML5 Canvas.</canvas>
         <div id="layers"></div>
       </div>
       <div id="controls">
-        <p class="show-about-text"><a href="#">About these graphs</a></p>
+        <p class="show-about-text"><a href="#">Acerca de estos gráficos</a></p>
         <div id='temperature-graph' class="graph" style="height: 187px;"></div>
         <div id='co2-graph' class="graph" style="height: 187px;"></div>
       </div>
       <div id="model-bottom">
         <ul>
           <li>
-            <button id="erupt-button">Erupt!</button>
-            <button id="subtract-co2-button">Remove CO<sub>2</sub></button>
+            <button id="erupt-button">¡Erupción!</button>
+            <button id="subtract-co2-button">Quitar CO<sub>2</sub></button>
           </li>
         </ul>
         <ul>
           <li>
-            <button id="follow-sunray-button" class="follow-agent">Follow energy packet</button>
-            <button id="follow-co2-button" class="follow-agent">Follow CO<sub>2</sub></button>
+            <button id="follow-sunray-button" class="follow-agent">Seguir paquete de energía</button>
+            <button id="follow-co2-button" class="follow-agent">Seguir CO<sub>2</sub></button>
           </li>
         </ul>
       </div>
@@ -80,7 +80,7 @@
             <i class="icon-pause"></i>
           </button>
         </div>
-        <span class="slider-units" title="Change the speed of the model"><img src="img/tortoise.jpg" style="margin-left: -10px;margin-right: -9px;margin-bottom: 4px;width: 36px;"/><div id="speed-slider" style="width:40px;margin:0.7em;margin-left:1em;"></div><img src="img/hare.jpg" style="margin-left: -8px;margin-bottom: 4px;width: 37px;"/></span>
+        <span class="slider-units" title="Cambiar la velocidad del modelo"><img src="img/tortoise.jpg" style="margin-left: -10px;margin-right: -9px;margin-bottom: 4px;width: 36px;"/><div id="speed-slider" style="width:40px;margin:0.7em;margin-left:1em;"></div><img src="img/hare.jpg" style="margin-left: -8px;margin-bottom: 4px;width: 37px;"/></span>
       </div>
       <div id="show-agent-controls">
         Show:
@@ -92,16 +92,16 @@
         <div class="checkbox">
           <input type="checkbox" value="None" id="showRays" name="check" checked/>
           <label for="showRays"></label>
-          <span>Rays</span>
+          <span>Rayos</span>
         </div>
         <div class="checkbox">
           <input type="checkbox" value="None" id="showHeat" name="check" checked/>
           <label for="showHeat"></label>
-          <span>Heat</span>
+          <span>Calor</span>
         </div>
       </div>
       <div id="year-box">
-        Year: <span id="year"></span>
+        Año: <span id="year"></span>
       </div>
     </div>
     <div id="footer">
