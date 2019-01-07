@@ -254,7 +254,7 @@ resetSliders = ->
 setupGraphs = ->
   if $('#temperature-graph').length
 
-    title = "Cambio de temperatura"
+    title = "Cambio de temperatura\n"
     if isOceanTemperatureModel then title += " en el Aire (rojo)\ny el Océano (azul)"
 
     ymax = if isOceanTemperatureModel then 12 else 12
