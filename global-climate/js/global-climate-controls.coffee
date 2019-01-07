@@ -67,7 +67,7 @@ $(document).ready ->
     { key: "calor", draw: (ctx) -> drawShape ctx, "rgb(255, 63, 63)", "circle", 0.8 }
   ]
 
-  defaultAboutText = "<p>Estos gráficos muestran el cambio relativo en la temperatura (superior) y la concentración de gases invernadero en la atmósfera y el océano (gráfico inferior). <p>Juntos, estos gráficos muestran la relación entre la concentración de gases invernadero y la temperatura del planeta. <p>This model is a simplified representation of the climate system, and as such, it does not show the actual concentrations of greenhouse gases in the atmosphere and ocean."
+  defaultAboutText = "<p>Estos gráficos muestran el cambio relativo en la temperatura (superior) y la concentración de gases invernadero en la atmósfera y el océano (gráfico inferior). <p>Juntos, estos gráficos muestran la relación entre la concentración de gases invernadero y la temperatura del planeta. <p>Este modelo es una representación simplificada del sistema climático, y como tal, no muestra la concentración actual de gases de efecto invernadero en la atmósfera y el océano."
 
   drawShape = (ctx, fillStyle, shapeName, scale=1) ->
     ctx.save()
@@ -196,7 +196,7 @@ $('#follow-sunray-button').click ->
   $span = $(this).find("span")
   if $span.text() is "Seguir paquete de energía"
     climateModel.addSunraySpotlight()
-    $span.text "Stop following"
+    $span.text "Dejar de seguir"
     isFollowingAgent = true
   else
     climateModel.removeSpotlight()
